@@ -1,0 +1,11 @@
+Projeto: NFeFacil
+
+Autor: Videoaulasneri e Adelcio
+
+Nome do Pacote:
+
+    br.com.videoaulasneri.adelcio.nfeweb
+
+Descrição do Pacote:
+
+    Este pacote contém as classes intermediárias dos eventos para consumo das webservices da NFe e NFCe.

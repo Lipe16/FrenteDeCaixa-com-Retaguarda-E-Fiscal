@@ -1,0 +1,11 @@
+Projeto: NFeFacil
+
+Autor: Videoaulasneri e Adelcio
+
+Nome do Pacote:
+
+    br.com.videoaulasneri.adelcio.relatorios
+
+Descrição do Pacote:
+
+    Este pacote contém as classes que geram os relatorios do faturamento

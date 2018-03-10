@@ -1,0 +1,11 @@
+Projeto: NFeFacil
+
+Autor: Videoaulasneri e Adelcio
+
+Nome do Pacote:
+
+    br.com.videoaulasneri.adelcio.fatura.dialog.view
+
+Descrição do Pacote:
+
+        Este pacote contém telas modal auxiliares da digitação da NFCe

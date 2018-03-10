@@ -1,0 +1,11 @@
+Projeto: NFeFacil
+
+Autor: Videoaulasneri e Adelcio
+
+Nome do Pacote:
+
+    br.com.videoaulasneri.adelcio.nfefacil.bean
+
+Descrição do Pacote:
+
+    Este pacote contém os beans necessários para a montagem do arquivo XML da NFe e NFCe

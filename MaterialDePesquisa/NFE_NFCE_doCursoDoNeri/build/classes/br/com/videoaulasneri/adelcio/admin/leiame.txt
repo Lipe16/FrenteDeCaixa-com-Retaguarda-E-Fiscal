@@ -1,0 +1,12 @@
+Projeto: NFeFacil
+
+Autor: Videoaulasneri e Adelcio
+
+Nome do Pacote: 
+
+    br.com.videoaulasneri.adelcio.admin
+
+Descrição do Pacote:
+
+    Área restrita ao administrador do sistema
+    Contém as classes para Manutenção das Tabelas que controlam o sistema

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Teste" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="pedido" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="empresa" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="endereco" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select
+*
+from
+	nf as nf,
+	nf_produtos as nfp,
+	produto as p
+where
+	nf.pedido = $P{pedido}
+and
+	nf.pedido = nfp.pedido
+and
+	nfp.cod_produto = p.codigo]]>
+	</queryString>
+	<field name="pedido" class="java.lang.Integer"/>
+	<field name="cod_cliente" class="java.lang.Integer"/>
+	<field name="cod_forma_pgto" class="java.lang.Integer"/>
+	<field name="cod_tipo_doc" class="java.lang.String"/>
+	<field name="cod_banco" class="java.lang.Integer"/>
+	<field name="data_digitacao" class="java.sql.Date"/>
+	<field name="valor_produtos" class="java.lang.Double"/>
+	<field name="valor_descontos" class="java.lang.Double"/>
+	<field name="valor_total" class="java.lang.Double"/>
+	<field name="cod_transportador" class="java.lang.Integer"/>
+	<field name="dados_adicionais" class="java.lang.String"/>
+	<field name="qtde_volume" class="java.lang.Integer"/>
+	<field name="peso_volume" class="java.lang.Double"/>
+	<field name="placa_veiculo" class="java.lang.String"/>
+	<field name="uf_placa" class="java.lang.String"/>
+	<field name="pedido_cliente" class="java.lang.String"/>
+	<field name="numero_nfe" class="java.math.BigDecimal"/>
+	<field name="serie_nfe" class="java.lang.String"/>
+	<field name="data_emissao" class="java.sql.Date"/>
+	<field name="chave_nfe" class="java.lang.String"/>
+	<field name="icms_bc" class="java.lang.Double"/>
+	<field name="icms_vlr" class="java.lang.Double"/>
+	<field name="ipi_bc" class="java.lang.Double"/>
+	<field name="ipi_vlr" class="java.lang.Double"/>
+	<field name="pis_bc" class="java.lang.Double"/>
+	<field name="pis_vlr" class="java.lang.Double"/>
+	<field name="cofins_bc" class="java.lang.Double"/>
+	<field name="cofins_vlr" class="java.lang.Double"/>
+	<field name="num_nfe_fat" class="java.math.BigDecimal"/>
+	<field name="fin_nfe" class="java.lang.String"/>
+	<field name="data_cancelamento" class="java.sql.Date"/>
+	<field name="num_nfe_dev" class="java.math.BigDecimal"/>
+	<field name="data_devolucao" class="java.sql.Date"/>
+	<field name="modelonfe" class="java.lang.String"/>
+	<field name="vtottrib" class="java.lang.Double"/>
+	<field name="doc_cliente" class="java.lang.String"/>
+	<field name="nome_documento" class="java.lang.String"/>
+	<field name="qrcode" class="java.lang.String"/>
+	<field name="tpemis" class="java.lang.String"/>
+	<field name="tpamb" class="java.lang.String"/>
+	<field name="item" class="java.lang.Integer"/>
+	<field name="cod_produto" class="java.lang.Integer"/>
+	<field name="cod_cfop" class="java.lang.Integer"/>
+	<field name="quantidade" class="java.lang.Integer"/>
+	<field name="peso" class="java.math.BigDecimal"/>
+	<field name="vlr_unitario" class="java.lang.Double"/>
+	<field name="vlr_produto" class="java.lang.Double"/>
+	<field name="vlr_desconto" class="java.lang.Double"/>
+	<field name="vlr_total" class="java.lang.Double"/>
+	<field name="icms_perc" class="java.lang.Double"/>
+	<field name="icms_pred" class="java.lang.Double"/>
+	<field name="icms_cst" class="java.lang.String"/>
+	<field name="ipi_perc" class="java.lang.Double"/>
+	<field name="ipi_cst" class="java.lang.String"/>
+	<field name="pis_perc" class="java.lang.Double"/>
+	<field name="pis_cst" class="java.lang.String"/>
+	<field name="cofins_perc" class="java.lang.Double"/>
+	<field name="cofins_cst" class="java.lang.String"/>
+	<field name="preco_custo" class="java.lang.Double"/>
+	<field name="codigo" class="java.lang.Integer"/>
+	<field name="nome_reduzido" class="java.lang.String"/>
+	<field name="seg_name" class="java.lang.String"/>
+	<field name="unidade" class="java.lang.String"/>
+	<field name="ean" class="java.lang.String"/>
+	<field name="ncm" class="java.lang.String"/>
+	<field name="cest" class="java.lang.String"/>
+	<field name="origem" class="java.lang.String"/>
+	<field name="preco_compra" class="java.lang.Double"/>
+	<field name="preco" class="java.lang.Double"/>
+	<field name="codigo_fornec" class="java.lang.String"/>
+	<field name="fornecedor" class="java.lang.String"/>
+	<field name="marca" class="java.lang.String"/>
+	<field name="link" class="java.lang.String"/>
+	<field name="images" class="java.lang.String"/>
+	<field name="source_fat" class="java.lang.String"/>
+	<field name="estoque" class="java.lang.Integer"/>
+	<field name="garantia" class="java.lang.Double"/>
+	<field name="descnovo" class="java.lang.String"/>
+	<field name="descricao" class="java.lang.String"/>
+	<field name="cnpj_fornecedor" class="java.lang.String"/>
+	<field name="trib_st_perc" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField>
+				<reportElement x="21" y="7" width="240" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{empresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="21" y="39" width="240" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{endereco}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="26" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{pedido}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="105" y="2" width="137" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ean}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

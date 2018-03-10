@@ -1,0 +1,11 @@
+Projeto: NFeFacil
+
+Autor: Videoaulasneri e Adelcio
+
+Nome do Pacote:
+
+    br.com.videoaulasneri.adelcio.nfeweb.eventos
+
+Descrição do Pacote:
+
+    Este pacote contém as classes necessárias para consumo das webservices da NFe e NFCe

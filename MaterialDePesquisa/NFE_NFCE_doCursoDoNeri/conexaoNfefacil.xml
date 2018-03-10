@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!--
+    Document   : conexao.xml
+    Created on : 8 de Julho de 2017, 14:00
+    Author     : Adelcio Porto
+    Description:
+        Purpose of the document follows.
+-->
+<!-- Conexao PostgreSQL -->
+<conexao>
+  <localsgbd>localhost</localsgbd>
+  <driver>org.postgresql.Driver</driver>
+  <usuarioBD>postgres</usuarioBD>
+  <senhaBD>nerizon</senhaBD>
+  <drive>jdbc:postgresql:</drive>
+  <nomebd>nfefacil</nomebd>
+  <fusoHorario>-02:00</fusoHorario>
+  <intervaloCaptura>3</intervaloCaptura>
+  <contatoCupom>Porto Informatica Ltda - portoinfo@sercomtel.com.br</contatoCupom>
+  <uriCupom>http://www.sped.fazenda.pr.gov.br/modules/conteudo/conteudo.php?conteudo=100</uriCupom>
+  <informarCnpjCartao>N</informarCnpjCartao>
+</conexao>
+
+<!-- Conexao Mysql -->
+<!-- 
+<conexao>
+  <localsgbd>localhost</localsgbd>
+  <driver>org.gjt.mm.mysql.Driver</driver>
+  <usuarioBD>NomeDoUsuario</usuarioBD>
+  <senhaBD>SenhaDoUsuario</senhaBD>
+  <drive>jdbc:mysql:</drive>
+  <nomebd>nfefacil</nomebd>
+  <fusoHorario>-03:00</fusoHorario>
+  <intervaloCaptura>3</intervaloCaptura>
+  <contatoCupom>Porto Informatica Ltda - portoinfo@sercomtel.com.br</contatoCupom>
+  <uriCupom>http://www.sped.fazenda.pr.gov.br/modules/conteudo/conteudo.php?conteudo=100</uriCupom>
+  <informarCnpjCartao>N</informarCnpjCartao>
+</conexao>
+-->
+
+<!-- Conexao Oracle -->
+<!-- 
+<conexao>
+  <localsgbd>@127.0.0.1:1521:XE</localsgbd>
+  <driver>oracle.jdbc.driver.OracleDriver</driver>
+  <usuarioBD>NomeDoUsuario</usuarioBD>
+  <senhaBD>SenhaDoUsuario</senhaBD>
+  <drive>jdbc:oracle:thin:</drive>
+  <nomebd>nfefacil</nomebd>
+  <fusoHorario>-03:00</fusoHorario>
+  <intervaloCaptura>3</intervaloCaptura>
+  <contatoCupom>Porto Informatica Ltda - portoinfo@sercomtel.com.br</contatoCupom>
+  <uriCupom>http://www.sped.fazenda.pr.gov.br/modules/conteudo/conteudo.php?conteudo=100</uriCupom>
+  <informarCnpjCartao>N</informarCnpjCartao>
+</conexao>
+-->
+
+<!-- Conexao SQLServer -->
+<!-- 
+<conexao>
+  <localsgbd>localhost:1433</localsgbd>
+  <driver>net.souceforge.jtds.jdbc.Driver</driver>
+  <usuarioBD>NomeDoUsuario</usuarioBD>
+  <senhaBD>SenhaDoUsuario</senhaBD>
+  <drive>jdbc:jtds:sqlserver</drive>
+  <nomebd>nfefacil</nomebd>
+  <fusoHorario>-03:00</fusoHorario>
+  <intervaloCaptura>3</intervaloCaptura>
+  <contatoCupom>Porto Informatica Ltda - portoinfo@sercomtel.com.br</contatoCupom>
+  <uriCupom>http://www.sped.fazenda.pr.gov.br/modules/conteudo/conteudo.php?conteudo=100</uriCupom>
+  <informarCnpjCartao>N</informarCnpjCartao>
+</conexao>
+-->

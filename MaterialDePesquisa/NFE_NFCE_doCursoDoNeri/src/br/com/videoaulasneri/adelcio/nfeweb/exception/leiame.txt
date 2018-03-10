@@ -1,0 +1,11 @@
+Projeto: NFeFacil
+
+Autor: Videoaulasneri e Adelcio
+
+Nome do Pacote:
+
+    br.com.videoaulasneri.adelcio.nfeweb.exception
+
+Descrição do Pacote:
+
+    Este pacote contém a classe de excessões dos eventos

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<enviNFe versao="3.10">
+  <NFe>
+    <infNFe versao="3.10">
+      <emit>
+        <CNPJ>09358587000180</CNPJ>
+        <pedidoInterno>xxxxxxxx</pedidoInterno>
+      </emit>
+      <dest>
+        <CPF>43734197953</CPF>
+        <xNome>Renan Calheiros</xNome>
+      </dest>
+      <det nItem="1">
+        <prod>
+          <cProd>18</cProd>
+          <cEAN>7891095300488</cEAN>
+          <xProd>Shampoo Colorama</xProd>
+          <NCM>07099990</NCM>
+          <CEST>9999999</CEST>
+          <CFOP>5102</CFOP>
+          <uCom>UN</uCom>
+          <qCom>1.0000</qCom>
+          <vUnCom>13.0000</vUnCom>
+          <vProd>13.00</vProd>
+          <uTrib>UN</uTrib>
+          <qTrib>1.0000</qTrib>
+          <vUnTrib>13.0000</vUnTrib>
+          <vDesc>2.5500</vDesc>
+          <indTot>1</indTot>
+          <codInterno>xxxxxx</codInterno>
+        </prod>
+        <imposto>
+          <ICMS>
+            <CST>102</CST>
+            <pICMS>0.00</pICMS>
+            <pRedBC>0.00</pRedBC>
+          </ICMS>
+          <PIS>
+            <CST>08</CST>
+            <pPIS>0.00</pPIS>
+          </PIS>
+          <COFINS>
+            <CST>08</CST>
+            <pCOFINS>0.00</pCOFINS>
+          </COFINS>
+        </imposto>
+      </det>
+      <transp>
+        <modFrete>9</modFrete>
+      </transp>
+      <pag>
+        <tPag>01</tPag>
+        <vPag>3.00</vPag>
+      </pag>
+      <pag>
+        <tPag>03</tPag>
+        <vPag>10.00</vPag>
+        <card>
+          <CNPJ>01234567000189</CNPJ>
+          <cAut>12345</cAut>
+        </card>
+      </pag>
+      <troco>
+        <vTroco>37.00</vTroco>
+      </troco>
+    </infNFe>
+    <infAdic>
+		<infCpl>teste de Informacoes Adicionais</infCpl>
+	</infAdic>
+	<diversos>
+		<imprimirCupom>N</imprimirCupom>
+	</diversos>
+  </NFe>
+</enviNFe>

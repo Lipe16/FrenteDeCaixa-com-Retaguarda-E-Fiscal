@@ -1,0 +1,11 @@
+Projeto: NFeFacil
+
+Autor: Videoaulasneri e Adelcio
+
+Nome do Pacote:
+
+    br.com.videoaulasneri.adelcio.nfefacil
+
+Descrição do Pacote:
+
+    Este é o pacote que contém a classe principal. A abertura do sistema.

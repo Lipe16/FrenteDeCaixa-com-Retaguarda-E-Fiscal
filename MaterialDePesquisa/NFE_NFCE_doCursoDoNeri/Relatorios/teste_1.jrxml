@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="teste_1"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="595"
+		 pageHeight="842"
+		 columnWidth="535"
+		 columnSpacing="0"
+		 leftMargin="30"
+		 rightMargin="30"
+		 topMargin="20"
+		 bottomMargin="20"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="2" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<parameter name="pedido" isForPrompting="true" class="java.lang.Integer">
+		<defaultValueExpression ><![CDATA[140]]></defaultValueExpression>
+	</parameter>
+	<parameter name="empresa" isForPrompting="true" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["empresa x"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="endereco" isForPrompting="true" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["endereco x"]]></defaultValueExpression>
+	</parameter>
+	<queryString><![CDATA[select
+*
+from
+	nf as nf,
+	nf_produtos as nfp,
+	produto as p
+where
+	nf.pedido = $P{pedido}
+and
+	nf.pedido = nfp.pedido
+and
+	nfp.cod_produto = p.codigo]]></queryString>
+
+	<field name="pedido" class="java.lang.Integer"/>
+	<field name="cod_cliente" class="java.lang.Integer"/>
+	<field name="cod_forma_pgto" class="java.lang.Integer"/>
+	<field name="cod_tipo_doc" class="java.lang.String"/>
+	<field name="cod_banco" class="java.lang.Integer"/>
+	<field name="data_digitacao" class="java.sql.Date"/>
+	<field name="valor_produtos" class="java.lang.Double"/>
+	<field name="valor_descontos" class="java.lang.Double"/>
+	<field name="valor_total" class="java.lang.Double"/>
+	<field name="cod_transportador" class="java.lang.Integer"/>
+	<field name="dados_adicionais" class="java.lang.String"/>
+	<field name="qtde_volume" class="java.lang.Integer"/>
+	<field name="peso_volume" class="java.lang.Double"/>
+	<field name="placa_veiculo" class="java.lang.String"/>
+	<field name="uf_placa" class="java.lang.String"/>
+	<field name="pedido_cliente" class="java.lang.String"/>
+	<field name="numero_nfe" class="java.math.BigDecimal"/>
+	<field name="serie_nfe" class="java.lang.String"/>
+	<field name="data_emissao" class="java.sql.Date"/>
+	<field name="chave_nfe" class="java.lang.String"/>
+	<field name="icms_bc" class="java.lang.Double"/>
+	<field name="icms_vlr" class="java.lang.Double"/>
+	<field name="ipi_bc" class="java.lang.Double"/>
+	<field name="ipi_vlr" class="java.lang.Double"/>
+	<field name="pis_bc" class="java.lang.Double"/>
+	<field name="pis_vlr" class="java.lang.Double"/>
+	<field name="cofins_bc" class="java.lang.Double"/>
+	<field name="cofins_vlr" class="java.lang.Double"/>
+	<field name="num_nfe_fat" class="java.math.BigDecimal"/>
+	<field name="fin_nfe" class="java.lang.String"/>
+	<field name="data_cancelamento" class="java.sql.Date"/>
+	<field name="num_nfe_dev" class="java.math.BigDecimal"/>
+	<field name="data_devolucao" class="java.sql.Date"/>
+	<field name="modelonfe" class="java.lang.String"/>
+	<field name="vtottrib" class="java.lang.Double"/>
+	<field name="doc_cliente" class="java.lang.String"/>
+	<field name="nome_documento" class="java.lang.String"/>
+	<field name="qrcode" class="java.lang.String"/>
+	<field name="tpemis" class="java.lang.String"/>
+	<field name="tpamb" class="java.lang.String"/>
+	<field name="item" class="java.lang.Integer"/>
+	<field name="cod_produto" class="java.lang.Integer"/>
+	<field name="cod_cfop" class="java.lang.Integer"/>
+	<field name="quantidade" class="java.lang.Integer"/>
+	<field name="peso" class="java.math.BigDecimal"/>
+	<field name="vlr_unitario" class="java.lang.Double"/>
+	<field name="vlr_produto" class="java.lang.Double"/>
+	<field name="vlr_desconto" class="java.lang.Double"/>
+	<field name="vlr_total" class="java.lang.Double"/>
+	<field name="icms_perc" class="java.lang.Double"/>
+	<field name="icms_pred" class="java.lang.Double"/>
+	<field name="icms_cst" class="java.lang.String"/>
+	<field name="ipi_perc" class="java.lang.Double"/>
+	<field name="ipi_cst" class="java.lang.String"/>
+	<field name="pis_perc" class="java.lang.Double"/>
+	<field name="pis_cst" class="java.lang.String"/>
+	<field name="cofins_perc" class="java.lang.Double"/>
+	<field name="cofins_cst" class="java.lang.String"/>
+	<field name="preco_custo" class="java.lang.Double"/>
+	<field name="codigo" class="java.lang.Integer"/>
+	<field name="nome_reduzido" class="java.lang.String"/>
+	<field name="seg_name" class="java.lang.String"/>
+	<field name="unidade" class="java.lang.String"/>
+	<field name="ean" class="java.lang.String"/>
+	<field name="ncm" class="java.lang.String"/>
+	<field name="cest" class="java.lang.String"/>
+	<field name="origem" class="java.lang.String"/>
+	<field name="preco_compra" class="java.lang.Double"/>
+	<field name="preco" class="java.lang.Double"/>
+	<field name="codigo_fornec" class="java.lang.String"/>
+	<field name="fornecedor" class="java.lang.String"/>
+	<field name="marca" class="java.lang.String"/>
+	<field name="link" class="java.lang.String"/>
+	<field name="images" class="java.lang.String"/>
+	<field name="source_fat" class="java.lang.String"/>
+	<field name="estoque" class="java.lang.Integer"/>
+	<field name="garantia" class="java.lang.Double"/>
+	<field name="descnovo" class="java.lang.String"/>
+	<field name="descricao" class="java.lang.String"/>
+	<field name="cnpj_fornecedor" class="java.lang.String"/>
+	<field name="trib_st_perc" class="java.lang.Double"/>
+
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="50"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="13"
+						y="9"
+						width="155"
+						height="18"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{empresa}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="306"
+						y="16"
+						width="156"
+						height="18"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{endereco}]]></textFieldExpression>
+				</textField>
+			</band>
+		</title>
+		<pageHeader>
+			<band height="50"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="30"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="25"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="5"
+						y="0"
+						width="100"
+						height="18"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Integer"><![CDATA[$F{pedido}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="122"
+						y="0"
+						width="136"
+						height="18"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{ean}]]></textFieldExpression>
+				</textField>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="30"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="50"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<lastPageFooter>
+			<band height="50"  isSplitAllowed="true" >
+			</band>
+		</lastPageFooter>
+		<summary>
+			<band height="50"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>
